@@ -236,7 +236,10 @@ console.log("____________________________"); // 957 kg
   console.log("Es.7 - ");
   console.log("DANGER! OVERLOAD ALERT: escape from ship now!");
   console.log("____________________________");
-}*/
+}
+  Per risolvere in questo modo si può fare con switch(true) e potevi usare 
+  questo tipo di sintassi*/
+
 if (crewMass <= 500) {
   console.log("Es.7 - ");
   console.log("Ship is under loaded");
@@ -279,6 +282,29 @@ console.log("____________________________");
   corrispondenti a personaggi con lo stesso nome.
   Una volta fatto crea un console.log per controllare la proprietà length di "charactersNames" prima e dopo l'operazione.
 */
+const superstiti = [];
+for (let i = 0; i < charactersNames.length; i++) {
+  let doppioni = false;
+  for (let i2 = 0; i2 < femaleCharacters.length; i2++) {
+    if (charactersNames[i] === femaleCharacters[i2].name) {
+      doppioni = true;
+    }
+  }
+  if (!doppioni) {
+    superstiti.push(charactersNames[i]);
+  }
+}
+console.log("Es.9 - ");
+console.log("Superstiti: ", superstiti);
+console.log("____________________________");
+/* Per la risoluzione di questo esercizio ho annidato due for: 
+Nel primo caso prendendo in analisi solo la prima lista ho messo un boolean false 
+in quanto fino a quel momento non vi erano doppioni. Dopodichè annidando un altro for 
+che prende in analisi la seconda lista ho cercato una stretta uguaglianza tra i nomi 
+della prima e i nomi dentro gli oggetti della seconda; qual'ora la condizione si fosse 
+verificata allora la variabile dobbioni assumeva valore true. Inizialmente nel secondo if 
+ho cercato i dppioni ma al console log mi uscivano giustamente solo i nomi femminili,
+ho così pensato di negare doppioni e mi è uscito il risultato corretto.*/
 
 /* --EXTRA-- ESERCIZIO 10
   Crea una funzionalità che selezioni un elemento casuale dall'array "starWarsCharacters" e ne stampi in console 
