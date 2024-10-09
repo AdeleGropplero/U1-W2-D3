@@ -261,17 +261,16 @@ if (crewMass <= 500) {
   Usa un for loop per cambiare il valore della proprietà "gender" di alcuni personaggi dal valore "n/a" a "robot" 
   (Tip: puoi effettuare la riassegnazione del valore corrispondente o creare un nuovo array)
 */
-
+let newGender = [];
 for (let i = 0; i < starWarsCharacters.length; i++) {
   if (starWarsCharacters[i].gender === "n/a") {
     starWarsCharacters[i].gender = "robot";
-    console.log("Es.8 - ");
-    console.log(starWarsCharacters[i].gender);
-    console.log("____________________________");
   }
+  newGender.push(starWarsCharacters[i].gender);
 }
-/*console.log("____________________________");
-console.log(starWarsCharacters[1].gender);*/
+console.log("Es.8 - ");
+console.log(newGender);
+console.log("____________________________");
 
 /* --EXTRA-- ESERCIZIO 9
   Utilizzando gli elementi presenti nell'array "femaleCharacters" rimuovi dall'array "charactersNames" le stringhe 
