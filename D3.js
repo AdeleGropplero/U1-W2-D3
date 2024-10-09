@@ -100,6 +100,7 @@ const starWarsCharacters = [
     gender: "male",
   },
 ];
+console.log(starWarsCharacters);
 
 /* ESERCIZIO 1
   Crea una variabile chiamata "charactersNames" e assegnale un array vuoto
@@ -152,25 +153,26 @@ console.log("____________________________");
   Ogni personaggio dovrà finire nell'array corrispondente al suo colore degli occhi (al valore della sua proprietà "eye_color").
 */
 for (let i = 0; i < starWarsCharacters.length; i++) {
-  switch (starWarsCharacters[i].eye_color) {
+  let character = starWarsCharacters[i];
+  switch (character.eye_color) {
     case "blue":
-      eyeColor.blue.push(starWarsCharacters[i]);
+      eyeColor.blue.push(character);
       break;
 
     case "yellow":
-      eyeColor.yellow.push(starWarsCharacters[i]);
+      eyeColor.yellow.push(character);
       break;
 
     case "brown":
-      eyeColor.brown.push(starWarsCharacters[i]);
+      eyeColor.brown.push(character);
       break;
 
     case "red":
-      eyeColor.red.push(starWarsCharacters[i]);
+      eyeColor.red.push(character);
       break;
 
     case "blue-gray":
-      eyeColor["blue-gray"].push(starWarsCharacters[i]);
+      eyeColor["blue-gray"].push(character);
       break;
 
     default:
@@ -179,7 +181,7 @@ for (let i = 0; i < starWarsCharacters.length; i++) {
   }
 }
 
-console.log("Es.4 - ");
+console.log("Es.5 - ");
 console.log("Occhi blu: ", eyeColor.blue);
 console.log("Occhi gialli: ", eyeColor.yellow);
 console.log("Occhi marroni: ", eyeColor.brown);
